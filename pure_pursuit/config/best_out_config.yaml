@@ -1,0 +1,31 @@
+pure_pursuit:
+  ros__parameters:
+    waypoints_path: "/home/seunghyun/mrlab_ws/src/pure_pursuit/racelines/lane_optimal.csv"
+    odom_topic: "/pf/pose/odom"
+    car_refFrame: "laser"
+    global_refFrame: "map"
+    drive_topic: "/ackermann_cmd"
+    rviz_current_waypoint_topic: "/current_waypoint"
+    rviz_lookahead_waypoint_topic: "/lookahead_waypoint"
+
+    min_lookahead: 0.7
+    max_lookahead: 1.8
+    high_lookahead: 2.5
+    lookahead_ratio: 3.5
+    high_alpha: 0.4
+    low_alpha : 0.7
+    steering_limit: 21.0
+
+    high_speed : 6.6
+    middle_speed : 4.6
+    low_speed : 3.2
+
+    high_speed_percentage: 0.8
+    real_high_speed_percentage: 0.9
+    hm_speed_percentage: 0.875
+    ml_speed_percentage: 0.8
+    low_speed_percentage: 0.9
+
+waypoint_visualizer_node:
+  ros__parameters:
+    waypoints_path: "/home/seunghyun/mrlab_ws/src/pure_pursuit/racelines/lane_optimal_outer.csv"

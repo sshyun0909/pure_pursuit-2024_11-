@@ -1,0 +1,56 @@
+pure_pursuit:
+  ros__parameters:
+    inner_waypoints_path: "/home/seunghyun/mrlab_ws/src/pure_pursuit/racelines/lane_optimal_inner.csv"
+    outer_waypoints_path: "/home/seunghyun/mrlab_ws/src/pure_pursuit/racelines/lane_optimal_outer.csv"
+    odom_topic: "/pf/pose/odom"
+    car_refFrame: "laser"
+    global_refFrame: "map"
+    drive_topic: "/ackermann_cmd"
+    rviz_current_waypoint_topic: "/current_waypoint"
+    rviz_lookahead_waypoint_topic: "/lookahead_waypoint"
+
+    point_x1: -1.7004
+    point_x2: 1.2408
+    point_y1: 8.0782
+    point_y2: 10.316
+
+    inner_max_lookahead: 0.7
+    inner_min_lookahead: 2.0
+    inner_high_lookahead: 2.5
+    inner_lookahead_ratio: 2.5
+    inner_high_alpha: 0.5
+    inner_low_alpha : 0.7
+    inner_steering_limit: 21.0
+
+    inner_high_speed : 6.6
+    inner_middle_speed : 4.5
+    inner_low_speed : 3.2
+
+    inner_high_speed_percentage: 0.7
+    inner_real_high_speed_percentage: 0.8
+    inner_hm_speed_percentage: 0.825
+    inner_ml_speed_percentage: 0.825
+    inner_low_speed_percentage: 1.2
+
+
+    outer_min_lookahead: 0.7
+    outer_max_lookahead: 2.0
+    outer_high_lookahead: 2.5
+    outer_lookahead_ratio: 2.5
+    outer_high_alpha: 0.4
+    outer_low_alpha : 0.55
+    outer_steering_limit: 21.0
+
+    outer_high_speed : 6.6
+    outer_middle_speed : 4.6
+    outer_low_speed : 3.2
+
+    outer_high_speed_percentage: 0.7
+    outer_real_high_speed_percentage: 0.7
+    outer_hm_speed_percentage: 0.85
+    outer_ml_speed_percentage: 0.8
+    outer_low_speed_percentage: 0.9
+
+waypoint_visualizer_node:
+  ros__parameters:
+    waypoints_path: "/home/seunghyun/mrlab_ws/src/pure_pursuit/racelines/lane_optimal.csv"
